@@ -17,18 +17,25 @@ import {auth,signOut,signIn} from '@/auth'
                             <Link href='/startup/create'>
                                 <span>Create</span>
                             </Link>
-                            <button onClick={signOut}>
-                                <span>Logout</span>
-                            </button>
+                            <form action={async ()=>{
+                                "use server"
+                                await signOut()
+                            }}>
+                                <button type="submit">Logout</button>
+                            </form>
                             <Link href={`/user/${session?.id}`}>
                                 <span>{session?.user?.name}</span>
                             </Link>
 
                         </>
                     ) : (
-                        <button onClick={signIn('github')}>
-                            <span>Login</span>
-                        </button>
+                        <form action={async ()=>{
+                            "use server"
+                            await signIn('github')
+
+                        }}>
+                            <button type="submit">Login</button>
+                        </form>
                     )
                  }
             </div>
