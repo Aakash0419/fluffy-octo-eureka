@@ -13,7 +13,7 @@ const Searchbar = ({query}:{query?:string}) => {
          placeholder="Search Startup"/>
          
          <div className="flex gap-2" >
-            {query &&<Searchformreset />}
+         {query && query.trim() !== '' && <Searchformreset />}
             <button type="submit" className="search-btn text-white">S</button>
          </div>
 
