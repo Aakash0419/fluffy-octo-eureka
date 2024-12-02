@@ -1,10 +1,9 @@
 import React from 'react'
 import Form from 'next/form'
-import Searchformreset from './Searchformreset'
-const Searchbar = ({query}:{query?:string}) => {
-  
+import Searchformreset from '..components/Searchformreset'
+const Searchbar = ({query}:{query:string}) => {
   return (
-    <>
+   
     <Form action="/" scroll={false} className="search-form" >
     <input
          name="query"
@@ -13,12 +12,14 @@ const Searchbar = ({query}:{query?:string}) => {
          placeholder="Search Startup"/>
          
          <div className="flex gap-2" >
-         {query && query.trim() !== '' && <Searchformreset />}
-            <button type="submit" className="search-btn text-white">S</button>
+          {query && <Searchformreset/>}
+            
+              <button type="submit" className="search-btn">S</button>
+              
          </div>
 
     </Form>
-    </>
+   
   )
 }
 
