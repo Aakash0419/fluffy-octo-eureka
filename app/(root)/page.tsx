@@ -12,6 +12,13 @@ export default function Home({searchParams}:{searchParams:{query?:string}}) {
       <Searchbar query={query}/>
       </section>
 
+      <section className="section_container">
+        <p className="text-30-semibold">
+          {query ? `Search results for "${query}"` : 'All Startups' }
+        </p>
+        <ul className="card_grid mt-7"></ul>
+
+      </section>
     </>
   );
 }
