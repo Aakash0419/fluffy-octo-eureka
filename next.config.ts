@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images:{
-    dangerouslyAllowSVG:true,
+   // dangerouslyAllowSVG:true,
     remotePatterns:[
       {
       protocol:'https',
