@@ -5,16 +5,17 @@ export const startup = defineType({
     type:"document",
     fields:[
         defineField({
+            name:"title",
+            type:"string"
+        }),
+        defineField({
             name:"slug",
             type:"slug",
             options:{
                 source:'title'
             }
         }),
-        defineField({
-            name:"title",
-            type:"string"
-        }),
+        
         defineField({
             name:"author",
             type:"reference",
