@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Button from 'next/button'
+import { Button } from '../components/ui/button'; // Import Button directly from the package
 import {EyeIcon} from 'lucide-react'
 import {formatdate} from '@/lib/utils'
 const startupcard = ({post}:{post:StartupTypeCard}) => {
