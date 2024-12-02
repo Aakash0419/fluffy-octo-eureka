@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Button from 'next/button'
 import {EyeIcon} from 'lucide-react'
 import {formatdate} from '@/lib/utils'
 const startupcard = ({post}:{post:StartupTypeCard}) => {
@@ -40,6 +41,14 @@ const startupcard = ({post}:{post:StartupTypeCard}) => {
                     <Image src={image} alt="placeholder" className="startup-carc_img" />
                 </Link>
                 <div className="flex-between gap-5">
+                    <Link href={`/?query/${category.toLowerCase()}.`}>
+                        <p className="text-16-medium">{category}</p>
+                    </Link>
+                    <Button className="startup-card_btn" asChild>
+                        <Link href={`/startup/${_id}`}>
+                            Details
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </li>
